@@ -1,0 +1,64 @@
+div#MainContainer
+{
+	width: 1024px;
+	height: 800px;
+	background-color: #e6e6dc;
+	margin: auto;
+	border-radius: 10px 10px 10px 10px;
+
+}
+div#Header
+{
+	background-color: #f2f2f2;
+	font-family: sans-serif;
+	font-style: italic;
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
+	margin: 0px 0px 0px 0px;
+	border-radius: 10px 10px 0px 0px;
+	}
+	
+div#Header h1{
+	margin: 0px 0px 0px 0px;
+}
+
+div#Left{
+	width: 34%;
+	display: block;
+	float: left;
+	height: 500px;
+}
+
+div#canvasframe{
+	width: 65%;
+	display: inline-block;
+}
+
+img#logo
+{
+	width: 110px;
+	height: 90px;
+	
+	}
+	
+div#inputBoxes{
+	width: 71%;
+	float: left;
+	
+}
+div#buttons{
+	width: 22%;
+	float: right;
+}
+div#submitdiv
+{
+	width: 50%;
+	float: left;
+	
+
+}
+div#resetdiv{
+	width: 50%;
+	float: right;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Element Builder</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/theming.css">
+<link rel="icon" type="image/png" href="icon.png">
+</head>
+<body>
+<div id="MainContainer">
+
+<div id="Header">
+<h1>Element Builder</h1>
+</div>
+<div id="Left">
+
+<div id="appLogo">
+<img id="logo" src="images/logo.png" alt="logo" >
+</div>
+
+<div id="inputBoxes" class="row">
+<span>
+    <input  id="electron" class="card-slide" id="knock" type="number" placeholder="How many?" /><label for="knock">Electrons</label>
+  </span>
+  <br>
+  <span>
+    <input id="proton" class="card-slide" id="max" type="number" placeholder="Fill Protons" /><label for="max">Protons</label>
+  </span>
+  <br>
+  <span>
+    <input id="neutron" class="card-slide" id="out" type="number" placeholder="How many?" /><label for="out">Neutrons</label>
+  </span>
+
+</div>
+<div id="buttons">
+
+<div class='container'>
+  <button id="ebutton" class='pulse-button'>&plus;</button>
+</div>
+
+<div class='container'>
+  <button id="pbutton" class='pulse-button'>&plus;</button>
+</div>
+
+
+<div class='container'>
+  <button id="nbutton" class='pulse-button'>&plus;</button>
+</div>
+
+</div>
+
+
+<div id="submitdiv">
+<button  id="submit"  value="submit">Submit</button> 
+</div>
+
+<div id="resetdiv">
+<button id="reset"  value="Reload Page" onclick="window.location.reload()">Reset</button>
+</div>
+
+</div>
+
+<div id="canvasframe">
+
+<canvas id="canvas" width="650" height="550" style="background-color:#ffffff;"</canvas>
+
+</div>
+
+
+<div id="Result">
+</div>
+<script src="js/Box2dWeb-2.1.a.3.min.js"></script>
+<script src="js/json.js"></script>
+<script src="js/MainVariable.js"></script>
+<script src="js/myscript.js"></script>
+</div>  
+</body>
+</html>
