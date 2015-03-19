@@ -60,7 +60,8 @@ function drawCanvas(){
       for (j=0;j<Result[i+1];j++,angle+=angleBreakdown) {
       if (j==0) {
       angleBreakdown=360/Result[i+1];
-      angle=angleBreakdown+angleIncrease;      
+      angle=angleBreakdown+angleIncrease; 
+      
       }
       pointX=(canvas.width/2)+ (radius*Math.cos(angle* Math.PI/180));
       pointY=(canvas.height/2)+ (radius*Math.sin(angle* Math.PI/180));
@@ -68,7 +69,11 @@ function drawCanvas(){
       
    }
 }
-angleIncrease+=0.8;
+if (electronFlag) {
+	electronFlag=false;
+}
+
+angleIncrease+=0.6;
 
 
       context.beginPath();
@@ -86,7 +91,7 @@ angleIncrease+=0.8;
       
       context.beginPath();
       context.arc((canvas.width/2)-0,(canvas.height/2)+27,26, 0, 2 * Math.PI); 
-      context.fillStyle='#4f3ed4';
+      context.fillStyle='#5498de';
       context.fill();
      
           

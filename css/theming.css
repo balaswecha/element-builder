@@ -87,8 +87,8 @@ div#elementname
 	margin-top: 24px;
 	}
 div#alert
-{
-	background-color: #00628b;
+{	
+	margin-top: 30px;
 	display: inline-block;
 	}
 	
@@ -202,7 +202,6 @@ font-family: "Open Sans", sans-serif;
   left: 0;
   padding: 14px 15px;
   text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
-  background: #7AB893;
   transition: all .3s ease-in-out;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;

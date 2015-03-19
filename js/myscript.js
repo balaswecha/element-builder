@@ -1,8 +1,8 @@
-
+var electronFlag=false;
 var nucleas=new Image();
 var imageLoad=false;
 var animationSet=false;
-var angleIncrease=0.09;
+var angleIncrease=0.06;
 var pbutton=document.getElementById("pbutton");
 pbutton.addEventListener("click",protonconfiguration);
 var nbutton=document.getElementById("nbutton");
@@ -66,6 +66,7 @@ function electronconfiguration(){
 	var electrons = parseInt(document.getElementById("electron").value);
 	mainObject.electrons=electrons;
 	setAtomType();
+	electronFlag=true;
 	if (!animationSet) {
 		animationSet=true;
 		window.requestAnimationFrame(drawCanvas);
@@ -84,6 +85,7 @@ function setAtomType() {
 	mainObject.ion="Neutral Atom";
 }
 }
+
 
 
 
@@ -123,4 +125,6 @@ function neutronconfiguration()
 	}
 	
 	}
+	
+
   
