@@ -1,8 +1,11 @@
-var electronFlag=false;
+var orbitalLoading=false;
 var nucleas=new Image();
 var imageLoad=false;
 var animationSet=false;
 var angleIncrease=0.06;
+var orbitNumber=1;
+var orbitalCounter=0;
+var lastOrbit=1;
 var pbutton=document.getElementById("pbutton");
 pbutton.addEventListener("click",protonconfiguration);
 var nbutton=document.getElementById("nbutton");
@@ -62,11 +65,37 @@ function elementConfiguration()
  	}
 }
 
+function  resultConfiguration(orbitalCounter)
+{
+ var result=document.getElementById("Result");
+
+ 		var config = "";
+ 		for(j=0;j<=orbitalCounter;j++){                                                                                                                                
+ 			for(k=0;k<configurationArray[j].length;k++){
+ 				if(k===1){
+ 				config +="<sup>"+configurationArray[j][k]+"</sup>";
+ 			}
+ 			else{
+ 				config +=configurationArray[j][k];
+ 				}
+ 				} 			
+ 			}
+ 		
+ 	result.innerHTML='<div id="elementname">'+config+'</div>';
+
+}
+
+
+
 function electronconfiguration(){
 	var electrons = parseInt(document.getElementById("electron").value);
 	mainObject.electrons=electrons;
 	setAtomType();
-	electronFlag=true;
+	orbitalLoading=true;
+	orbitNumber=1;
+	electronResult(electrons);
+	orbitalCounter=0;
+   lastOrbit=1;
 	if (!animationSet) {
 		animationSet=true;
 		window.requestAnimationFrame(drawCanvas);
@@ -85,11 +114,6 @@ function setAtomType() {
 	mainObject.ion="Neutral Atom";
 }
 }
-
-
-
-
-
 function protonconfiguration()
 
 { 
@@ -101,11 +125,7 @@ function protonconfiguration()
 		animationSet=true;
 		window.requestAnimationFrame(drawCanvas);
 	}
-		
-
-
 }
-
 function setName(protons) {
 	for(i in json) {
 		if (json[i].Protons===parseInt(protons)) {
@@ -114,7 +134,6 @@ function setName(protons) {
 		}
 		}
 	}
-
 function neutronconfiguration()
 {
 	var neutrons=parseInt(document.getElementById("neutron").value);
@@ -125,6 +144,24 @@ function neutronconfiguration()
 	}
 	
 	}
+	
+	
+	function getOrbitalConfiguration(orbitalCounter) {
+	var Result = new Array();
+	Result[0]=orbitalCounter;
+	     	
+     	for(i=0;i<orbitalCounter;i++){
+     		if(Result[parseInt(configurationArray[i][0][0])]!=undefined)
+     		{
+     		Result[parseInt(configurationArray[i][0][0])]+=configurationArray[i][1];
+     	}
+     	else {
+     		Result[parseInt(configurationArray[i][0][0])]=0;
+     		Result[parseInt(configurationArray[i][0][0])]=configurationArray[i][1];
+     	}
+    }
+ 	return Result;
+ }
 	
 
   
