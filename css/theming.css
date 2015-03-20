@@ -87,8 +87,10 @@ div#elementname
 	margin-top: 24px;
 	}
 div#alert
+
 {	
 	margin-top: 30px;
+	background-color: #00628b;
 	display: inline-block;
 	}
 	
@@ -113,7 +115,7 @@ button#nbutton{
   -ms-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-    display: block;
+  display: block;
   width: 36px;
   height: 36px;
   padding-bottom: 4px;
@@ -202,6 +204,7 @@ font-family: "Open Sans", sans-serif;
   left: 0;
   padding: 14px 15px;
   text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+  background: #7AB893;
   transition: all .3s ease-in-out;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;

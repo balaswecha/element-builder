@@ -1,3 +1,4 @@
+
 var orbitalLoading=false;
 var nucleas=new Image();
 var imageLoad=false;
@@ -6,6 +7,10 @@ var angleIncrease=0.06;
 var orbitNumber=1;
 var orbitalCounter=0;
 var lastOrbit=1;
+var nucleas=new Image();
+var imageLoad=false;
+var animationSet=false;
+var angleIncrease=0.09;
 var pbutton=document.getElementById("pbutton");
 pbutton.addEventListener("click",protonconfiguration);
 var nbutton=document.getElementById("nbutton");
@@ -85,8 +90,6 @@ function  resultConfiguration(orbitalCounter)
 
 }
 
-
-
 function electronconfiguration(){
 	var electrons = parseInt(document.getElementById("electron").value);
 	mainObject.electrons=electrons;
@@ -126,6 +129,7 @@ function protonconfiguration()
 		window.requestAnimationFrame(drawCanvas);
 	}
 }
+
 function setName(protons) {
 	for(i in json) {
 		if (json[i].Protons===parseInt(protons)) {
@@ -144,8 +148,6 @@ function neutronconfiguration()
 	}
 	
 	}
-	
-	
 	function getOrbitalConfiguration(orbitalCounter) {
 	var Result = new Array();
 	Result[0]=orbitalCounter;
@@ -162,6 +164,3 @@ function neutronconfiguration()
     }
  	return Result;
  }
-	
-
-  

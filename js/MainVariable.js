@@ -31,6 +31,8 @@ Result[0]=electrons;
      	
 
 }
+
+
  	break;
  	}
  	
@@ -52,17 +54,24 @@ function drawCanvas(){
 	
 	
  	orbits=Result.length-1;
+	
+	context.clearRect(0,0,canvas.width,canvas.height);
+	Result=getConfiguration(mainObject.electrons);
+
+ 	
+ 	
+ 	orbits=Result.length-1;
+ 	context.clearRect(0,0,canvas.width,canvas.height);
  	radius=80;
  	for (i=0;i<orbits;i++,radius+=30) {
  		context.beginPath();
       context.arc(canvas.width/2,canvas.height/2,radius,0,2*Math.PI);
-      
       context.stroke();
       for (j=0;j<Result[i+1];j++,angle+=angleBreakdown) {
       if (j==0) {
       angleBreakdown=360/Result[i+1];
       angle=angleBreakdown+(angleIncrease/(i+1)); 
-      
+
       }
       pointX=(canvas.width/2)+ (radius*Math.cos(angle* Math.PI/180));
       pointY=(canvas.height/2)+ (radius*Math.sin(angle* Math.PI/180));
@@ -70,7 +79,7 @@ function drawCanvas(){
       
    }
 }
-angleIncrease+=0.5;
+angleIncrease+=0.8;
 
 }
 else {
@@ -114,6 +123,9 @@ if (orbitalCounter==configurationArray.length) {
 }
 	
 }
+
+
+
       context.beginPath();
       context.arc(canvas.width/2,canvas.height/2,50,0,2*Math.PI);
       context.strokeStyle = '#000000';
@@ -154,8 +166,6 @@ if (orbitalCounter==configurationArray.length) {
       
  }
 
-
-
 function electronResult(electrons) {
 	
 	configurationArray = [];
@@ -170,9 +180,4 @@ function electronResult(electrons) {
  	
  	}
  }
-		
-	
-
-
-
 

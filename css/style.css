@@ -55,13 +55,12 @@ div#submitdiv
 {
 	width: 50%;
 	float: left;
-	
-
-}
+	}
 div#resetdiv{
 	width: 50%;
 	float: right;
 }
+
 label#knock
 {
 background: #7AB893;
